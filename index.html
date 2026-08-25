@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Skyline Payment | Kassensysteme &amp; Kartenzahlung – in 48 Stunden startklar</title>
+<meta name="description" content="TSE-konforme Kassensysteme und Kartenzahlung für Gastronomie und Einzelhandel. Persönlicher Ansprechpartner, faire Konditionen, deutschlandweit. Jetzt kostenlos beraten lassen.">
+<link rel="icon" href="assets/skyline-logo.webp" type="image/webp">
+<meta property="og:title" content="Skyline Payment – Kassensysteme &amp; Kartenzahlung">
+<meta property="og:description" content="In 48 Stunden startklar. Persönlicher Ansprechpartner statt Warteschleife.">
+<meta property="og:image" content="assets/skyline-logo.webp">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --color-primary: #1C1D20;
+    --color-primary-soft: #2E3033;
+    --color-accent: #B08D4F;
+    --color-accent-hover: #8F6F38;
+    --color-accent-light: #EDE2CB;
+    --color-background: #FAF8F4;
+    --color-surface: #FFFFFF;
+    --color-text: #1C1D20;
+    --color-text-muted: #6B665C;
+    --color-text-inverse: #FAF8F4;
+    --color-text-inverse-muted: #B9B6AE;
+    --color-border: #E4DDCF;
+    --max-width: 1180px;
+    --radius: 10px;
+  }
+
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    margin: 0;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: var(--color-background);
+    color: var(--color-text);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-weight: 600;
+    line-height: 1.2;
+    margin: 0 0 0.6em;
+    color: inherit;
+  }
+
+  p { margin: 0 0 1em; }
+  img { max-width: 100%; display: block; }
+  a { color: var(--color-accent); }
+
+  .container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  section { padding: 72px 0; }
+  @media (max-width: 640px) { section { padding: 48px 0; } }
+
+  .eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: var(--color-accent-hover);
+    margin-bottom: 0.9em;
+    display: inline-block;
+  }
+
+  /* Header */
+  header.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: rgba(250, 248, 244, 0.92);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 14px 24px;
+  }
+
+  .logo-link { flex-shrink: 0; }
+  .logo-link img { height: 34px; width: auto; }
+
+  nav.main-nav {
+    display: flex;
+    gap: 28px;
+  }
+  nav.main-nav a {
+    color: var(--color-text);
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 500;
+  }
+  nav.main-nav a:hover { color: var(--color-accent-hover); }
+
+  @media (max-width: 780px) {
+    nav.main-nav { display: none; }
+  }
+
+  .header-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--color-accent);
+    color: var(--color-primary);
+    padding: 10px 18px;
+    border-radius: 999px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: background 0.15s ease;
+  }
+  .header-cta:hover { background: var(--color-accent-hover); color: var(--color-text-inverse); }
+
+  /* Buttons */
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 15px 30px;
+    border-radius: 999px;
+    font-weight: 600;
+    font-size: 1rem;
+    text-decoration: none;
+    border: 2px solid transparent;
+    transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+    cursor: pointer;
+  }
+  .btn-primary {
+    background: var(--color-accent);
+    color: var(--color-primary);
+  }
+  .btn-primary:hover { background: var(--color-accent-hover); color: var(--color-text-inverse); }
+  .btn-outline {
+    background: transparent;
+    border-color: var(--color-border);
+    color: var(--color-text);
+  }
+  .btn-outline:hover { border-color: var(--color-accent); color: var(--color-accent-hover); }
+  .btn-outline-inverse {
+    background: transparent;
+    border-color: rgba(250,248,244,0.35);
+    color: var(--color-text-inverse);
+  }
+  .btn-outline-inverse:hover { border-color: var(--color-accent); color: var(--color-accent); }
+
+  .cta-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-top: 1.8em;
+  }
+
+  /* Hero */
+  .hero {
+    padding: 88px 0 64px;
+  }
+  .hero-inner {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 48px;
+    align-items: center;
+  }
+  @media (max-width: 900px) {
+    .hero-inner { grid-template-columns: 1fr; }
+  }
+  .hero h1 {
+    font-size: clamp(2rem, 4.2vw, 3rem);
+    max-width: 16ch;
+  }
+  .hero .lede {
+    font-size: 1.15rem;
+    color: var(--color-text-muted);
+    max-width: 46ch;
+  }
+  .hero-visual {
+    background: var(--color-primary);
+    border-radius: 20px;
+    padding: 40px;
+    color: var(--color-text-inverse);
+    position: relative;
+    overflow: hidden;
+  }
+  .hero-visual::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 80% 0%, rgba(176,141,79,0.28), transparent 55%);
+  }
+  .hero-visual-inner { position: relative; }
+  .hero-visual img { height: 30px; width: auto; margin-bottom: 28px; filter: brightness(0) invert(1); opacity: 0.92; }
+  .hero-stat { display: flex; align-items: baseline; gap: 10px; margin-bottom: 18px; }
+  .hero-stat .num { font-family: 'Playfair Display', serif; font-size: 2.1rem; color: var(--color-accent-light); }
+  .hero-stat .label { color: var(--color-text-inverse-muted); font-size: 0.92rem; }
+  .hero-divider { height: 1px; background: rgba(250,248,244,0.15); margin: 22px 0; }
+  .hero-quote { font-size: 1.05rem; font-style: italic; color: var(--color-text-inverse); }
+  .hero-quote-source { font-size: 0.85rem; color: var(--color-text-inverse-muted); margin-top: 8px; }
+
+  /* Trust bar */
+  .trust-bar {
+    border-top: 1px solid var(--color-border);
+    border-bottom: 1px solid var(--color-border);
+    padding: 22px 0;
+  }
+  .trust-bar ul {
+    list-style: none;
+    margin: 0; padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 14px 40px;
+  }
+  .trust-bar li {
+    font-size: 0.92rem;
+    font-weight: 600;
+    color: var(--color-text-muted);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .trust-bar li::before {
+    content: "";
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: var(--color-accent);
+    display: inline-block;
+  }
+
+  /* Section headers */
+  .section-head { max-width: 62ch; margin-bottom: 44px; }
+  .section-head.center { margin-left: auto; margin-right: auto; text-align: center; }
+  .section-head h2 { font-size: clamp(1.6rem, 3vw, 2.2rem); }
+  .section-head p { color: var(--color-text-muted); font-size: 1.05rem; }
+
+  /* Cards grid */
+  .grid {
+    display: grid;
+    gap: 24px;
+  }
+  .grid-3 { grid-template-columns: repeat(3, 1fr); }
+  .grid-4 { grid-template-columns: repeat(4, 1fr); }
+  @media (max-width: 900px) { .grid-3, .grid-4 { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 600px) { .grid-3, .grid-4 { grid-template-columns: 1fr; } }
+
+  .card {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    padding: 28px;
+  }
+  .card h3 { font-size: 1.1rem; margin-bottom: 0.5em; }
+  .card p { color: var(--color-text-muted); font-size: 0.96rem; margin: 0; }
+  .card .card-icon {
+    width: 40px; height: 40px;
+    border-radius: 10px;
+    background: var(--color-accent-light);
+    color: var(--color-accent-hover);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.2rem;
+    margin-bottom: 16px;
+  }
+
+  /* Problem section */
+  .section-problem { background: var(--color-surface); border-top: 1px solid var(--color-border); border-bottom: 1px solid var(--color-border); }
+
+  /* Solution */
+  .solution-list { display: grid; gap: 20px; grid-template-columns: repeat(2, 1fr); }
+  @media (max-width: 700px) { .solution-list { grid-template-columns: 1fr; } }
+  .solution-item { display: flex; gap: 16px; }
+  .solution-item .marker {
+    flex-shrink: 0;
+    width: 34px; height: 34px;
+    border-radius: 50%;
+    background: var(--color-primary);
+    color: var(--color-accent-light);
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+  }
+  .solution-item h3 { font-size: 1.05rem; margin-bottom: 4px; }
+  .solution-item p { color: var(--color-text-muted); font-size: 0.95rem; margin: 0; }
+
+  /* Branchen chips */
+  .chip-row { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 28px; }
+  .chip {
+    background: var(--color-accent-light);
+    color: var(--color-accent-hover);
+    padding: 7px 16px;
+    border-radius: 999px;
+    font-size: 0.85rem;
+    font-weight: 600;
+  }
+
+  /* Process */
+  .section-process { background: var(--color-primary); color: var(--color-text-inverse); }
+  .section-process .section-head p { color: var(--color-text-inverse-muted); }
+  .process-steps {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    counter-reset: step;
+  }
+  @media (max-width: 900px) { .process-steps { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 560px) { .process-steps { grid-template-columns: 1fr; } }
+  .process-step {
+    border: 1px solid rgba(250,248,244,0.15);
+    border-radius: var(--radius);
+    padding: 26px 22px;
+    background: var(--color-primary-soft);
+  }
+  .process-step .step-num {
+    font-family: 'Playfair Display', serif;
+    color: var(--color-accent-light);
+    font-size: 1.6rem;
+    margin-bottom: 12px;
+  }
+  .process-step h3 { font-size: 1.02rem; color: var(--color-text-inverse); }
+  .process-step p { color: var(--color-text-inverse-muted); font-size: 0.92rem; margin: 0; }
+
+  /* Social proof */
+  .proof-band {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    flex-wrap: wrap;
+    background: var(--color-accent-light);
+    border-radius: 16px;
+    padding: 32px 36px;
+  }
+  .proof-stars { font-size: 1.6rem; color: var(--color-accent-hover); letter-spacing: 2px; }
+  .proof-band .proof-text h3 { margin-bottom: 4px; font-size: 1.2rem; }
+  .proof-band .proof-text p { margin: 0; color: var(--color-text-muted); }
+
+  /* FAQ */
+  .faq-list { max-width: 760px; }
+  details.faq-item {
+    border-bottom: 1px solid var(--color-border);
+    padding: 18px 0;
+  }
+  details.faq-item summary {
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 1.02rem;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+  }
+  details.faq-item summary::-webkit-details-marker { display: none; }
+  details.faq-item summary::after {
+    content: "+";
+    font-size: 1.4rem;
+    color: var(--color-accent-hover);
+    flex-shrink: 0;
+    transition: transform 0.15s ease;
+  }
+  details.faq-item[open] summary::after { transform: rotate(45deg); }
+  details.faq-item p {
+    color: var(--color-text-muted);
+    margin-top: 12px;
+    padding-right: 24px;
+  }
+
+  /* Final CTA */
+  .section-final-cta {
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-soft) 100%);
+    color: var(--color-text-inverse);
+    text-align: center;
+  }
+  .section-final-cta h2 { color: var(--color-text-inverse); }
+  .section-final-cta .lede { color: var(--color-text-inverse-muted); max-width: 48ch; margin: 0 auto; font-size: 1.1rem; }
+  .section-final-cta .cta-row { justify-content: center; }
+  .hours-note { margin-top: 22px; font-size: 0.9rem; color: var(--color-text-inverse-muted); }
+
+  /* Footer */
+  footer.site-footer {
+    background: var(--color-primary);
+    color: var(--color-text-inverse-muted);
+    padding: 56px 0 28px;
+  }
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 1fr;
+    gap: 40px;
+    padding-bottom: 32px;
+    border-bottom: 1px solid rgba(250,248,244,0.12);
+  }
+  @media (max-width: 700px) { .footer-grid { grid-template-columns: 1fr; gap: 32px; } }
+  footer .footer-logo img { height: 28px; filter: brightness(0) invert(1); opacity: 0.92; margin-bottom: 14px; }
+  footer .footer-logo p { font-size: 0.92rem; max-width: 38ch; }
+  footer h4 { color: var(--color-text-inverse); font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 14px; }
+  footer ul { list-style: none; margin: 0; padding: 0; }
+  footer li { margin-bottom: 10px; font-size: 0.94rem; }
+  footer a { color: var(--color-text-inverse-muted); text-decoration: none; }
+  footer a:hover { color: var(--color-accent); }
+  .footer-bottom {
+    padding-top: 24px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 12px;
+    font-size: 0.85rem;
+  }
+  .footer-note {
+    font-size: 0.82rem;
+    color: rgba(185,182,174,0.75);
+    max-width: 70ch;
+    margin: 18px 0 0;
+  }
+
+  .sr-only {
+    position: absolute; width: 1px; height: 1px;
+    padding: 0; margin: -1px; overflow: hidden;
+    clip: rect(0,0,0,0); white-space: nowrap; border: 0;
+  }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a href="#top" class="logo-link" aria-label="Skyline Payment – Start">
+      <img src="assets/skyline-logo.webp" alt="Skyline Payment">
+    </a>
+    <nav class="main-nav" aria-label="Hauptnavigation">
+      <a href="#leistungen">Leistungen</a>
+      <a href="#ablauf">Ablauf</a>
+      <a href="#faq">FAQ</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
+    <a class="header-cta" href="tel:+491716437231">
+      &#128222; +49 171 643 72 31
+    </a>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero">
+    <div class="container hero-inner">
+      <div>
+        <span class="eyebrow">Kassensysteme &amp; Kartenzahlung für Gastronomie &amp; Einzelhandel</span>
+        <h1>In 48 Stunden startklar – mit einem festen Ansprechpartner statt Warteschleife</h1>
+        <p class="lede">Skyline Payment richtet Ihr TSE-konformes Kassensystem und Ihre Kartenzahlung ein und bleibt danach erreichbar. Nicht das günstigste Angebot. Das richtige.</p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="tel:+491716437231">Jetzt anrufen: +49 171 643 72 31</a>
+          <a class="btn btn-outline" href="mailto:info@skyline-vertrieb.de">E-Mail schreiben</a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-visual-inner">
+          <img src="assets/skyline-logo.webp" alt="">
+          <div class="hero-stat">
+            <span class="num">5,0</span>
+            <span class="label">★★★★★ Google-Bewertungen</span>
+          </div>
+          <div class="hero-stat">
+            <span class="num">48h</span>
+            <span class="label">Ziel-Aktivierungszeit</span>
+          </div>
+          <div class="hero-divider"></div>
+          <p class="hero-quote">„Nicht das günstigste Angebot. Das richtige.“</p>
+          <p class="hero-quote-source">Leitgedanke von Skyline Payment</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="trust-bar">
+    <div class="container">
+      <ul>
+        <li>5,0 ★ bei Google</li>
+        <li>TSE-konform</li>
+        <li>Deutschlandweit</li>
+        <li>Persönlicher Ansprechpartner</li>
+        <li>DATEV-fähig</li>
+      </ul>
+    </div>
+  </div>
+
+  <section class="section-problem">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Kennen Sie das?</span>
+        <h2>Ein Anbieterwechsel fühlt sich oft nach mehr Arbeit an, als er sein müsste</h2>
+        <p>Bevor über ein neues Kassensystem gesprochen wird, lohnt sich ein Blick auf das, was den Wechsel bisher unnötig schwer gemacht hat.</p>
+      </div>
+      <div class="grid grid-3">
+        <div class="card">
+          <div class="card-icon">&#9203;</div>
+          <h3>Wochen statt Tage</h3>
+          <p>Viele Anbieter brauchen Wochen für Antrag, Freischaltung und Einrichtung – bis dahin behilft man sich provisorisch.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">&#9742;</div>
+          <h3>Wechselnde Hotline-Stimmen</h3>
+          <p>Bei einer Rückfrage landen Sie in der allgemeinen Warteschleife statt bei jemandem, der Ihren Betrieb kennt.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">&#128203;</div>
+          <h3>Kosten aus dem Kleingedruckten</h3>
+          <p>Grundgebühren, Mindestlaufzeiten oder Zusatzkosten, die erst nach der Unterschrift sichtbar werden.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="leistungen">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Das Angebot</span>
+        <h2>Was Skyline Payment stattdessen macht</h2>
+        <p>Vier Punkte, auf die es bei einem Kassensystem und einer Kartenzahlungslösung tatsächlich ankommt.</p>
+      </div>
+      <div class="solution-list">
+        <div class="solution-item">
+          <span class="marker">1</span>
+          <div>
+            <h3>Schnelle Aktivierung</h3>
+            <p>Ziel ist die Inbetriebnahme innerhalb von 48 Stunden, sobald die nötigen Unterlagen vorliegen.</p>
+          </div>
+        </div>
+        <div class="solution-item">
+          <span class="marker">2</span>
+          <div>
+            <h3>Faire Konditionen</h3>
+            <p>Konditionen, die im Beratungsgespräch offen erklärt werden – ohne versteckte Positionen im Kleingedruckten.</p>
+          </div>
+        </div>
+        <div class="solution-item">
+          <span class="marker">3</span>
+          <div>
+            <h3>Persönlicher Ansprechpartner</h3>
+            <p>Eine feste Kontaktperson für Ihren Betrieb statt wechselnder Support-Mitarbeiter in einer Hotline.</p>
+          </div>
+        </div>
+        <div class="solution-item">
+          <span class="marker">4</span>
+          <div>
+            <h3>Steuerberater-kompatibel</h3>
+            <p>TSE-konforme Kassenführung mit DATEV-fähigem Reporting, das sich direkt an Ihre Buchhaltung anschließen lässt.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="chip-row" aria-label="Branchen">
+        <span class="chip">Gastronomie</span>
+        <span class="chip">Einzelhandel</span>
+        <span class="chip">Bäckerei</span>
+        <span class="chip">Café &amp; Coffeeshop</span>
+        <span class="chip">Pizzeria</span>
+        <span class="chip">Friseur</span>
+        <span class="chip">Hotel &amp; Pension</span>
+        <span class="chip">Kosmetik &amp; Nagelstudio</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="ablauf" class="section-process">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow" style="color: var(--color-accent-light);">Ablauf</span>
+        <h2>So läuft die Umstellung ab</h2>
+        <p>Vier Schritte, vom ersten Kontakt bis zur laufenden Betreuung.</p>
+      </div>
+      <div class="process-steps">
+        <div class="process-step">
+          <div class="step-num">01</div>
+          <h3>Anfrage</h3>
+          <p>Sie schildern kurz, welches Kassensystem und welche Kartenzahlung Sie brauchen.</p>
+        </div>
+        <div class="process-step">
+          <div class="step-num">02</div>
+          <h3>Beratung</h3>
+          <p>Persönliches Gespräch, in dem das passende Setup für Ihren Betrieb festgelegt wird.</p>
+        </div>
+        <div class="process-step">
+          <div class="step-num">03</div>
+          <h3>Aktivierung</h3>
+          <p>Kassensystem und Kartenzahlung gehen mit dem Ziel von 48 Stunden live.</p>
+        </div>
+        <div class="process-step">
+          <div class="step-num">04</div>
+          <h3>Betreuung</h3>
+          <p>Ihr fester Ansprechpartner bleibt auch nach der Einrichtung erreichbar.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="proof-band">
+        <div class="proof-stars">★★★★★</div>
+        <div class="proof-text">
+          <h3>5,0 von 5 Sternen bei Google</h3>
+          <p>Bewertet von Gastronomie- und Einzelhandelsbetrieben, die auf Skyline Payment umgestellt haben.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Häufige Fragen</span>
+        <h2>Bevor Sie anrufen, vielleicht schon beantwortet</h2>
+      </div>
+      <div class="faq-list">
+        <details class="faq-item">
+          <summary>Muss ich meinen laufenden Vertrag zuerst kündigen?</summary>
+          <p>Im Beratungsgespräch schauen wir uns Ihre bestehende Laufzeit an und planen den Wechsel so, dass er sich sauber einfädelt – ohne Lücke im laufenden Betrieb.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Wie realistisch sind die 48 Stunden bis zur Aktivierung?</summary>
+          <p>Das ist die Zielgröße, mit der eine Umstellung geplant wird, sobald alle Unterlagen vorliegen. Im Beratungsgespräch erfahren Sie, was das konkret für Ihren Betrieb bedeutet.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Ist das auch für kleine Betriebe mit wenig Umsatz geeignet?</summary>
+          <p>Ja. Skyline Payment betreut einzelne Ladengeschäfte ebenso wie größere Filialstrukturen in Gastronomie und Einzelhandel.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Bekomme ich wirklich eine feste Ansprechperson statt einer Hotline?</summary>
+          <p>Ja – das ist der Kern des Angebots: eine persönliche Kontaktperson für Ihren Betrieb, statt wechselnder Support-Mitarbeiter.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Ist das System TSE-konform und DATEV-fähig?</summary>
+          <p>Ja. Beides gehört zum Standardumfang, damit Kassenführung und Buchhaltung rechtssicher ineinandergreifen.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section id="kontakt" class="section-final-cta">
+    <div class="container">
+      <h2>Lassen Sie uns über Ihr Kassensystem sprechen</h2>
+      <p class="lede">Kostenlos, unverbindlich, ohne Warteschleife.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="tel:+491716437231">Jetzt anrufen: +49 171 643 72 31</a>
+        <a class="btn btn-outline-inverse" href="mailto:info@skyline-vertrieb.de">E-Mail schreiben</a>
+      </div>
+      <p class="hours-note">Mo–Fr 9:00–18:00 Uhr &nbsp;·&nbsp; 24/7 Notfall-Support &nbsp;·&nbsp; Telefon Frankfurt: +49 69 27293922</p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-logo">
+        <img src="assets/skyline-logo.webp" alt="Skyline Payment">
+        <p>Kassensysteme &amp; Kartenzahlung für Gastronomie und Einzelhandel. Deutschlandweit, mit persönlichem Ansprechpartner.</p>
+      </div>
+      <div>
+        <h4>Kontakt</h4>
+        <ul>
+          <li><a href="tel:+491716437231">+49 171 643 72 31</a></li>
+          <li><a href="tel:+496927293922">+49 69 27293922</a></li>
+          <li><a href="mailto:info@skyline-vertrieb.de">info@skyline-vertrieb.de</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Rechtliches</h4>
+        <ul>
+          <li><a href="https://itrk.legal/1yVk.8U.185c-informal.html" target="_blank" rel="noopener noreferrer">Impressum</a></li>
+          <li><a href="https://itrk.legal/1yVk.8U.185c-informal.html" target="_blank" rel="noopener noreferrer">Datenschutz</a></li>
+          <li><a href="https://skyline-payment.de" target="_blank" rel="noopener noreferrer">Zur Hauptseite</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Skyline Payment</span>
+      <span>Frankfurt am Main &middot; Deutschlandweit</span>
+    </div>
+    <p class="footer-note">Diese Seite ist eine Werbe-Landingpage von Skyline Payment. Impressum und Datenschutzerklärung führen zur Rechtsseite des Hauptauftritts unter skyline-payment.de.</p>
+  </div>
+</footer>
+
+</body>
+</html>
