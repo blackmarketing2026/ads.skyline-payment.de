@@ -20,23 +20,6 @@ export function WhatsAppIcon(props: IconProps) {
   );
 }
 
-export function ReceiptIcon(props: IconProps) {
-  return (
-    <svg viewBox="0 0 48 48" fill="none" aria-hidden="true" {...props}>
-      <path d="M13 7h22v34l-4-3-4 3-4-3-4 3-4-3-4 3V9a2 2 0 0 1 2-2z" stroke="currentColor" strokeWidth="2" strokeLinejoin="round" />
-      <path d="M18 17h12M18 24h12M18 31h8" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-    </svg>
-  );
-}
-
-export function GermanyIcon(props: IconProps) {
-  return (
-    <svg viewBox="0 0 48 48" fill="currentColor" aria-hidden="true" {...props}>
-      <path d="M17.5 5.5l3.8-1.6 3.2 1.2 3.6-1.1 2.9 2.4-1 3 2.8 1.6 3.9 3.6-1.9 2.9 1.3 3.4-2.1 2.6.8 3.5-2.6 2.1.4 3.6-3 1.9-.6 3.6-3.6 1.4-2.6-1.6-3.3.9-2.8-1.8-3.5.4-2-2.9 1.4-3.2-2.3-2.7 2-3-1.7-3 2.6-2.6-.6-3.4 3-2 .3-3.6 3.3-1.4z" />
-    </svg>
-  );
-}
-
 export function HandshakeIcon(props: IconProps) {
   return (
     <svg viewBox="0 0 48 48" fill="none" aria-hidden="true" {...props}>
@@ -60,24 +43,6 @@ export function PersonLineIcon(props: IconProps) {
     <svg viewBox="0 0 48 48" fill="none" aria-hidden="true" {...props}>
       <circle cx="24" cy="15" r="6" stroke="currentColor" strokeWidth="2" />
       <path d="M12 39c2.1-7 6.1-10.5 12-10.5S33.9 32 36 39" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-    </svg>
-  );
-}
-
-export function PrinterIcon(props: IconProps) {
-  return (
-    <svg viewBox="0 0 48 48" fill="none" aria-hidden="true" {...props}>
-      <path d="M14 18V8h20v10M15 34H9V20h30v14h-6" stroke="currentColor" strokeWidth="2" strokeLinejoin="round" />
-      <path d="M16 28h16v13H16V28zM18 34h12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-    </svg>
-  );
-}
-
-export function ChartIcon(props: IconProps) {
-  return (
-    <svg viewBox="0 0 48 48" fill="none" aria-hidden="true" {...props}>
-      <path d="M8 39h32M14 33V22M24 33V13M34 33v-7" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" />
-      <path d="M13 16l8 4 8-9 6 5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
     </svg>
   );
 }
