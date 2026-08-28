@@ -5,7 +5,7 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        ink: "#080B0F",
+        ink: "rgb(8 11 15 / <alpha-value>)",
         charcoal: "#11151C",
         graphite: "#171B22",
         gold: "#C99432",

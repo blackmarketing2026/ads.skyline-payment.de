@@ -19,7 +19,7 @@ export function Header() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-white/10 bg-ink/96 shadow-[0_8px_28px_rgba(0,0,0,0.35)] backdrop-blur">
+    <header className="sticky top-0 z-50 border-b border-white/10 bg-ink shadow-[0_8px_28px_rgba(0,0,0,0.35)]">
       <div className="section-shell flex h-[86px] items-center justify-between gap-6 lg:h-[104px]">
         <Link href="#" aria-label="Skyline Payments Startseite" className="shrink-0">
           <Image src="/brand/skyline-logo-light.svg" width={190} height={73} alt="Skyline Payment" priority />
