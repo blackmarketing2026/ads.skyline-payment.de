@@ -6,26 +6,23 @@ import { PosSystemVisual } from "./PosSystemVisual";
 
 export function Hero() {
   return (
-    <section className="hero-backdrop border-b border-line pt-10 md:pt-14" id="kassensysteme">
+    <section className="hero-backdrop border-b border-line pb-10 pt-8 md:pt-10" id="kassensysteme">
       <div className="mesh-blob left-[-6%] top-[6%] h-72 w-72 bg-gold/25 animate-float" />
       <div className="mesh-blob right-[8%] top-[42%] h-64 w-64 bg-gold-light/20 animate-float [animation-delay:-3s]" />
-      <div className="section-shell relative grid min-h-[650px] items-center gap-8 pb-8 lg:grid-cols-[1.02fr_1.32fr_0.76fr] lg:gap-4">
-        <div className="relative z-10" data-reveal>
-          <h1 className="font-display text-[44px] font-black leading-[1.08] text-ink sm:text-6xl lg:text-[61px]">
-            KASSENSYSTEME.
-            <br />
-            PAYMENT. SERVICE.
-            <br />
-            <span className="text-gradient-gold">VOM TISCH BIS</span>
-            <br />
-            <span className="text-gradient-gold">ZUR THEKE.</span>
-            <br />
-            TAP. PAY. DONE.
+      <div className="section-shell relative grid items-start gap-x-8 gap-y-10 lg:grid-cols-[1fr_1.18fr_0.62fr] lg:gap-4">
+        <div className="relative z-10 lg:pt-4" data-reveal>
+          <span className="inline-flex items-center gap-2 rounded-full border border-gold/40 bg-gold/10 px-3.5 py-1.5 text-[11px] font-extrabold uppercase tracking-[0.14em] text-ink">
+            <span className="h-1.5 w-1.5 rounded-full bg-gold" />
+            Tap. Pay. Done.
+          </span>
+          <h1 className="font-display mt-4 text-[32px] font-black leading-[1.1] text-ink sm:text-[42px] lg:text-[46px]">
+            Kassensysteme, Payment &amp; Service
+            <span className="text-gradient-gold"> vom Tisch bis zur Theke.</span>
           </h1>
-          <p className="mt-8 max-w-[520px] text-lg font-medium leading-relaxed text-ink/86">
+          <p className="mt-5 max-w-[480px] text-base font-medium leading-relaxed text-ink/75 sm:text-lg">
             Moderne Kassensysteme & Payment-Lösungen für Gastronomie und Einzelhandel - schnell, transparent und persönlich.
           </p>
-          <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:flex-wrap">
+          <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
             <a href={contactLinks.whatsapp} className="gold-button inline-flex min-h-12 items-center justify-center gap-2 rounded-md px-6 text-sm font-extrabold text-white">
               <WhatsAppIcon className="h-5 w-5" />
               Per WhatsApp anfragen
@@ -40,7 +37,7 @@ export function Hero() {
             </a>
           </div>
         </div>
-        <div className="order-last lg:order-none" data-reveal>
+        <div className="order-last lg:order-none lg:self-center" data-reveal>
           <PosSystemVisual />
         </div>
         <HeroBenefits />
