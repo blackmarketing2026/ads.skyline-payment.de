@@ -26,7 +26,7 @@ body {
 }
 
 body {
-  font-family: var(--font-inter), Arial, sans-serif;
+  font-family: var(--font-manrope), Arial, sans-serif;
 }
 
 button,
@@ -37,8 +37,9 @@ textarea {
 }
 
 .font-display {
-  font-family: var(--font-playfair), Georgia, serif;
-  letter-spacing: 0;
+  font-family: var(--font-fraunces), Georgia, serif;
+  font-optical-sizing: auto;
+  letter-spacing: -0.01em;
 }
 
 .section-shell {
@@ -47,26 +48,91 @@ textarea {
 }
 
 .hero-backdrop {
+  position: relative;
+  overflow: hidden;
   background:
-    linear-gradient(90deg, rgba(255, 255, 255, 0.94) 0%, rgba(255, 255, 255, 0.76) 49%, rgba(255, 255, 255, 0.95) 100%),
-    radial-gradient(circle at 52% 20%, rgba(216, 170, 80, 0.18), transparent 22rem),
-    linear-gradient(135deg, rgba(17, 21, 28, 0.08) 0 1px, transparent 1px),
+    radial-gradient(circle at 82% -6%, rgba(201, 148, 50, 0.16), transparent 30rem),
+    radial-gradient(circle at -4% 30%, rgba(201, 148, 50, 0.08), transparent 26rem),
+    linear-gradient(135deg, rgba(17, 21, 28, 0.06) 0 1px, transparent 1px),
     #f7f7f5;
-  background-size: auto, auto, 38px 38px, auto;
+  background-size: auto, auto, 40px 40px, auto;
 }
 
 .dark-panel {
+  position: relative;
+  overflow: hidden;
   background:
     radial-gradient(circle at 18% 0%, rgba(216, 170, 80, 0.18), transparent 28rem),
     linear-gradient(135deg, #10161e 0%, #080b0f 72%);
 }
 
 .gold-button {
-  background: linear-gradient(180deg, #d8aa50 0%, #bd8426 100%);
+  background: linear-gradient(180deg, #dcb264 0%, #bd8426 100%);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.25) inset, 0 12px 28px -10px rgba(201, 148, 50, 0.55);
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1), filter 0.35s ease;
+}
+
+.gold-button:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.05);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.3) inset, 0 18px 36px -10px rgba(201, 148, 50, 0.65);
 }
 
 .card-line {
   background: linear-gradient(180deg, rgba(255,255,255,0.96), rgba(247,247,245,0.94));
+}
+
+.text-gradient-gold {
+  background: linear-gradient(115deg, #f0c778 0%, #c99432 45%, #a8721f 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.mesh-blob {
+  position: absolute;
+  border-radius: 9999px;
+  filter: blur(60px);
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.grain-overlay {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.035;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* Scroll-reveal: elements start hidden and fade up once observed as visible. */
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  transition-delay: var(--reveal-delay, 0ms);
+}
+
+[data-reveal].is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [data-reveal] {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+.hover-lift {
+  transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.45s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.45s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-6px);
 }
 
 @media (max-width: 767px) {

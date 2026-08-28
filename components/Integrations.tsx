@@ -6,7 +6,7 @@ export function Integrations() {
   return (
     <section className="bg-white py-2">
       <div className="section-shell">
-        <div className="dark-panel flex flex-col items-center justify-between gap-7 rounded-xl px-8 py-7 text-white shadow-dark lg:flex-row">
+        <div className="dark-panel flex flex-col items-center justify-between gap-7 rounded-xl px-8 py-7 text-white shadow-dark lg:flex-row" data-reveal>
           <h2 className="text-sm font-black uppercase tracking-normal">Kompatibel mit führenden Partnern</h2>
           <div className="flex flex-wrap items-center justify-center gap-5">
             <span className="rounded-sm bg-emerald-500 px-4 py-3 text-sm font-black text-white">DATEV</span>

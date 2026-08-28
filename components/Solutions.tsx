@@ -14,12 +14,12 @@ export function Solutions() {
   return (
     <section className="bg-white py-12" id="loesungen">
       <div className="section-shell">
-        <h2 className="text-center text-3xl font-black tracking-normal text-ink">
-          LÖSUNGEN FÜR <span className="text-gold">GASTRONOMIE & EINZELHANDEL</span>
+        <h2 className="text-center font-display text-3xl font-black tracking-normal text-ink" data-reveal>
+          LÖSUNGEN FÜR <span className="text-gradient-gold">GASTRONOMIE & EINZELHANDEL</span>
         </h2>
         <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-5">
           {solutions.map(([title, text, Visual]) => (
-            <article key={title} className="card-line rounded-lg border border-zinc-200 p-5 text-center shadow-premium transition hover:-translate-y-1 hover:shadow-dark">
+            <article key={title} className="group card-line hover-lift rounded-lg border border-zinc-200 p-5 text-center shadow-premium hover:border-gold/40 hover:shadow-lift" data-reveal>
               <Visual />
               <h3 className="mt-4 text-sm font-black text-ink">{title}</h3>
               <p className="mt-3 text-sm font-medium leading-relaxed text-zinc-700">{text}</p>

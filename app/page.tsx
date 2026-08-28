@@ -7,11 +7,13 @@ import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
 import { Integrations } from "@/components/Integrations";
 import { MobileCTA } from "@/components/MobileCTA";
+import { ScrollReveal } from "@/components/ScrollReveal";
 import { Solutions } from "@/components/Solutions";
 
 export default function Home() {
   return (
     <>
+      <ScrollReveal />
       <Header />
       <main>
         <Hero />

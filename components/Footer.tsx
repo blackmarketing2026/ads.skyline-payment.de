@@ -14,7 +14,7 @@ export function Footer() {
   return (
     <footer className="bg-ink py-8 text-white">
       <div className="section-shell grid gap-8 md:grid-cols-[220px_1fr_1fr] md:items-center">
-        <Image src="/brand/skyline-logo-light.svg" width={180} height={69} alt="Skyline Payment" />
+        <Image src="/images/brand/skyline-logo-light.svg" width={180} height={69} alt="Skyline Payment" />
         <div>
           <p className="font-black">Kassensysteme. Payment. Service.</p>
           <p className="mt-2 font-medium text-white/[0.85]">Vom Tisch bis zur Theke. Tap. Pay. Done.</p>

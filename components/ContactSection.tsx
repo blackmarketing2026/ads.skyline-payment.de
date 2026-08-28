@@ -17,7 +17,7 @@ export function ContactSection() {
     <section className="bg-white py-12 pb-24 md:pb-14" id="kontakt">
       <div className="section-shell">
         <div className="grid gap-6 lg:grid-cols-[0.95fr_1.65fr]">
-          <div className="dark-panel rounded-xl p-9 text-white shadow-dark">
+          <div className="dark-panel rounded-xl p-9 text-white shadow-dark" data-reveal>
             <CrownIcon className="h-11 w-11 text-gold-light" />
             <h2 className="font-display mt-6 text-4xl font-black leading-tight">
               LASSEN SIE UNS
@@ -30,8 +30,8 @@ export function ContactSection() {
           </div>
           <div className="grid gap-5 md:grid-cols-3">
             {cards.map(([title, text, button, href, Icon]) => (
-              <article key={title} className="rounded-lg border border-zinc-200 bg-white p-6 text-center shadow-premium">
-                <Icon className="mx-auto h-9 w-9 text-ink" />
+              <article key={title} className="hover-lift rounded-lg border border-zinc-200 bg-white p-6 text-center shadow-premium hover:border-gold/40 hover:shadow-lift" data-reveal>
+                <Icon className="mx-auto h-9 w-9 text-gold" />
                 <h3 className="mt-5 text-sm font-black text-ink">{title}</h3>
                 <p className="mt-5 min-h-[58px] text-sm font-medium leading-relaxed text-zinc-700">{text}</p>
                 <a href={href} className="gold-button mt-5 inline-flex min-h-11 items-center justify-center rounded-md px-7 text-sm font-extrabold text-white">
