@@ -1,0 +1,7 @@
+<svg width="250" height="96" viewBox="0 0 250 96" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title">
+  <title id="title">Skyline Payment</title>
+  <path d="M107 18l8-10 8 10 9-6-3 16h-28l-3-16 9 6z" stroke="#C99432" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M17 30h78M155 30h78" stroke="#C99432" stroke-width="2"/>
+  <text x="125" y="62" text-anchor="middle" font-family="Georgia, serif" font-size="42" letter-spacing="4" fill="#080B0F">SKYLINE</text>
+  <text x="125" y="84" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" letter-spacing="5" fill="#C99432">PAYMENT</text>
+</svg>

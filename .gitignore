@@ -1,4 +1,15 @@
-# Unencrypted source of the landing page — never commit this to the
-# public repo. index.html in the repo root is the password-encrypted
-# build; source/index.html is the real, editable content.
-source/
+node_modules/
+.next/
+out/
+dist/
+
+.env
+.env.local
+.env.*.local
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+.vercel/
