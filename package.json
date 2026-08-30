@@ -1,0 +1,9 @@
+{
+  "name": "ads-skyline-payment-de",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Skyline Payments landing page - static site with a Vercel serverless function for the contact form.",
+  "dependencies": {
+    "nodemailer": "^9.0.6"
+  }
+}
