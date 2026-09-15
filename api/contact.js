@@ -45,6 +45,7 @@ function buildLeadEmailHtml(data) {
   var email = escapeHtml(data.email);
   var industry = escapeHtml(data.industry) || "-";
   var systemSize = escapeHtml(data.systemSize) || "-";
+  var acquisition = escapeHtml(data.acquisition) || "-";
   var message = escapeHtml(data.message) || "-";
   var logoUrl = data.origin + "/assets/images/logo/logo.webp";
 
@@ -110,6 +111,7 @@ function buildLeadEmailHtml(data) {
     row("E-Mail", email) +
     row("Branche", industry) +
     row("Kassenplätze", systemSize) +
+    row("Modell", acquisition) +
     "</table>" +
     '<p style="margin:20px 0 6px;font-family:Arial,Helvetica,sans-serif;font-size:13px;font-weight:700;color:#8a7a4a;">Nachricht</p>' +
     '<p style="margin:0 0 24px;font-family:Arial,Helvetica,sans-serif;font-size:14px;line-height:1.6;color:#111417;white-space:pre-wrap;">' +
@@ -175,6 +177,7 @@ module.exports = async function handler(req, res) {
   var email = sanitizeHeader(body.email);
   var industry = sanitizeHeader(body.industry);
   var systemSize = sanitizeHeader(body.system_size);
+  var acquisition = sanitizeHeader(body.acquisition);
   var message = String(body.message || "").trim();
   var privacyAccepted = body.privacy === "accepted";
 
@@ -194,6 +197,7 @@ module.exports = async function handler(req, res) {
     "E-Mail: " + email,
     "Branche: " + (industry || "-"),
     "Kassenplätze: " + (systemSize || "-"),
+    "Modell: " + (acquisition || "-"),
     "",
     "Nachricht:",
     message || "-",
@@ -217,7 +221,7 @@ module.exports = async function handler(req, res) {
       replyTo: '"' + name + '" <' + email + ">",
       subject: "Neue Anfrage über die Website – " + name + (company ? " (" + company + ")" : ""),
       text: lines.join("\n"),
-      html: buildLeadEmailHtml({ name: name, company: company, phone: phone, email: email, industry: industry, systemSize: systemSize, message: message, origin: origin }),
+      html: buildLeadEmailHtml({ name: name, company: company, phone: phone, email: email, industry: industry, systemSize: systemSize, acquisition: acquisition, message: message, origin: origin }),
     });
 
     redirect(res, "/pages/danke.html");
