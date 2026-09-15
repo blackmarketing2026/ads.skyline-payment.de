@@ -2,5 +2,11 @@
   "framework": null,
   "buildCommand": null,
   "installCommand": "npm install",
-  "outputDirectory": null
+  "outputDirectory": null,
+  "rewrites": [
+    {
+      "source": "/gastronomie-kassensystem",
+      "destination": "/pages/gastronomie-kassensystem.html"
+    }
+  ]
 }
